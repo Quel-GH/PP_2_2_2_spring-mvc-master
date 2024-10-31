@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Cars</h1>
+    <br/>
+    <div>
+        <table border="1">
+            <tr>
+                <th>Series</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+            <tr th:each="car : ${carList}">
+                <td th:utext="${car.getSeries()}"></td>
+                <td th:utext="${car.getModel()}"></td>
+                <td th:utext="${car.getYear()}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+
+
+
+
+<!--<div>-->
+<!--    <th:block th:each="cars : ${carList}">-->
+<!--        <table th:substituteby="${cars}"></table>-->
+<!--    </th:block>-->
+<!--</div>-->
